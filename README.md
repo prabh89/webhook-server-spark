@@ -10,7 +10,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https
 
 ```sh
 $ git clone https://github.com/prabh89/webhook-server-spark.git # or clone your own fork
-$ cd simple-webhook-server
+$ cd webhook-server-spark
 $ npm install
 $ npm start
 ```
