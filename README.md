@@ -9,7 +9,7 @@ For information This application support the [Getting Started with Node on Herok
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/thousandeyes/simple-webhook-server.git # or clone your own fork
+$ git clone https://github.com/prabh89/webhook-server-spark.git # or clone your own fork
 $ cd simple-webhook-server
 $ npm install
 $ npm start
