@@ -18,7 +18,7 @@ function translateHookContent_slack(req) {
     var retVal = "";
     switch (req.body.eventType) {
         case "ALERT_NOTIFICATION_TRIGGER":
-            retVal = "Alert notification /n[<" + req.body.alert.permalink + "|" + req.body.alert.alertId + ">]: " + req.body.alert.testName + " (" + req.body.alert.ruleName + ")\n";
+            retVal = "Alert notification <" + req.body.alert.permalink + "|" + req.body.alert.alertId + ">]: " + req.body.alert.testName + " (" + req.body.alert.ruleName + ")\n";
             switch (req.body.alert.type) {
                 case "BGP":
                     break;
