@@ -8,6 +8,6 @@
     "node-rest-client": "~1.5.x"
   },
   "scripts": {
-    "start": "node webhook-server.js"
+    "start": "node webhook-server-spark.js"
   }
 }
