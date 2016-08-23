@@ -70,7 +70,7 @@ function translateHookContent_slack(req) {
         default:
             retVal = "Received unregistered event type " + req.body.eventType + " from ThousandEyes webhook.  Body data: \n" + JSON.stringify(req.body);
     }
-    return ({ username: "ThousandEyes Alerts", icon_url: te_img, text: retVal});
+    return ({ roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vZmQ5YmE0NjAtNGEyNS0xMWU2LTg2M2MtNzE5ZTk4OTZiMzZj", text: retVal});
 }
 
 app.get('/', function(request, response) {
@@ -90,7 +90,7 @@ router.post('/test/:token', function(req, res) {
     console.log('Received: ' + JSON.stringify(req.body));
     var restCall = new restClient();
     var hookBody = translateHookContent_slack(req);
-    var args = {data: hookBody,headers:{"Content-Type": "application/json"}};
+    var args = {data: hookBody,headers:{"Content-Type": "application/json", "authorization": "Bearer MDgzZDdlZmQtNzkxNy00ZTZjLThmZjEtNzljNzFiZTMwMGY5MDhiMGQ5OWUtYzQ0"}};
     restCall.post(TARGET_HOOK, args, function(data,response) {
         console.log('Sending to destination hook: ' + JSON.stringify(args));
         res.status(response.statusCode).send(response.statusMessage);
